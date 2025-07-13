@@ -1,9 +1,4 @@
-import util from './Util'
-
-let url:string = 'https://unpkg.com/megajs/dist/main.browser-es.mjs'
-
-
-
+ import { Storage } from 'https://unpkg.com/megajs/dist/main.browser-es.mjs'
 
 const storage = new Storage({
   email: 'user@example.com',
@@ -13,4 +8,4 @@ const storage = new Storage({
 
 // Will resolve once the user is logged in
 // or reject if some error happens
-await storage.ready
+await storage.ready 
