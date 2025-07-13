@@ -39,3 +39,12 @@ async function xpcall<T>(
     return [false, handledError];
   }
 }
+
+
+async function getraw(url: string): Promise<string> {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`http err | stat: ${response.status}`);
+  }
+  return await response.text();
+}
